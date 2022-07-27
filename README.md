@@ -1,4 +1,4 @@
-##Run app
+## Run app
 ```
 npm install govuk-frontend --save
 npm run dev
@@ -33,7 +33,7 @@ and then run
 ![Choose The Browser](https://docs.cypress.io/_nuxt/img/select-browser.b7ecf05.png)
 
 
-##E2E testing
+## E2E testing
 [Tutorial from cypress website here](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#What-you-ll-learn)
 
 1. In the launchpad add a new test file
@@ -48,7 +48,7 @@ A default test will be added to the file
 Your cypress interface should display your new test file
 ![cypress interface new test file](https://docs.cypress.io/_nuxt/img/spec-list-with-new-spec.61d015d.png)
 
-##The Syntax
+## The Syntax
 ```javascript
 describe('My First Test', () => {
   it('Does not do much!', () => {
@@ -60,7 +60,7 @@ describe('My First Test', () => {
 ***Important***
 You need to run your server to be able to run E2E tests with cypress!
 
-##Useful syntax
+## Useful syntax
 
 See all the commands on the left:
 [Cypress documentation on commands](https://docs.cypress.io/api/commands/should)
