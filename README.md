@@ -2,9 +2,14 @@
 ```
 npm install govuk-frontend --save
 npm run dev
-
 ```
 
+in separate terminal run 
+`npm run cypress:open` to open the cypress launchpad
+or 
+`npx cypress run` to run tests in the console
+
+## Cypress tutorial
 1. Install cypress
 `npm install cypress --save-dev`
 
@@ -23,6 +28,8 @@ npm run dev
 and then run
 
 `npm run cypress:open`
+
+Alternatively run `npx cypress run` to run the tests in the console.
 
 4. In the launchpad choose the testing method - we are interested in end-to-end testing (E2E)
 ![Choose Testing Method](https://docs.cypress.io/_nuxt/img/choose-testing-type.a397de3.png)
