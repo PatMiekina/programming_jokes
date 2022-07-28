@@ -7,10 +7,7 @@
     "start": "node .",
     "dev": "nodemon . & npm run scss",
     "scss": "sass --watch src/scss/main.scss public/styles/main.css",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "server": "node src/server.js",
-    "ci": "start-server-and-test server http://localhost:3000 cypress:run"
+    "cypress:open": "cypress open"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +19,6 @@
   },
   "devDependencies": {
     "cypress": "^10.3.1",
-    "nodemon": "^2.0.19",
-    "start-server-and-test": "^1.14.0"
+    "nodemon": "^2.0.19"
   }
 }
