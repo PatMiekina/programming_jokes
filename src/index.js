@@ -19,17 +19,14 @@ app.get('/', (req, res) => {
             const jokeData = JSON.parse(data);
             if (jokeData.joke) {
                 joke = jokeData.joke;
-                res.send(joke);
             } else if (jokeData.setup && jokeData.delivery) {
                 joke = (jokeData.setup + "\n" + jokeData.delivery);
             }
+            res.render('index', {yourJoke: joke});
             console.log(joke);
         })
-        response.on('end', () => {
-            return joke;
-        })
     })
-    res.render('index', {yourJoke: joke});
+    // res.render('index', {yourJoke: joke});
     // res.sendFile(path.join(__dirname, 'pages/index.html'))
 })
 
