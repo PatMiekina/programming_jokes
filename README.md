@@ -39,6 +39,14 @@ Alternatively run `npx cypress run` to run the tests in the console.
 5. In the launchpad choose the browser that you want to use
 ![Choose The Browser](https://docs.cypress.io/_nuxt/img/select-browser.b7ecf05.png)
 
+6. Create a .gitignore (`touch .gitignore`) file and paste in there
+
+```
+node_modules
+cypress/screenshots
+cypress/videos
+```
+
 
 ## E2E testing
 [Tutorial from cypress website here](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#What-you-ll-learn)

@@ -2903,5 +2903,3 @@ exports.SkipLink = SkipLink;
 exports.Tabs = Tabs;
 
 })));
-
-console.log("Hi, I'm working!")
