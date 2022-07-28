@@ -8,6 +8,7 @@ cypress/videos
 2. Install start server as a dependency
 `npm install --save-dev start-server-and-test`
 3. Add missing scripts to package.json
+MAKE SURE YOU HAVE THE RIGHT PATH FOR “server” script!
 ```json
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
