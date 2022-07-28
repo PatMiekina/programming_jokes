@@ -1,3 +1,9 @@
+# CircleCI Setup Tutorial
+
+This is a step by step tutorial to add CircleCI to your project. It is a continuation of [government front-end styling tutorial](https://github.com/PatMiekina/gov-styling) and [cypress tutorial](https://github.com/PatMiekina/cypress-tutorial)
+
+Big shoutout to marvelous [Donny](https://github.com/donnyhyon) & fabulous [Gabby](https://github.com/gab-bernotaite) for working on a tutorial with me, thanks guys! ❤️
+
 1. Create a .gitignore file (`touch .gitignore`) (if not already there). Add following to file:
 ```
 node_modules
@@ -82,3 +88,5 @@ git pull
 ```
 
 13. ENJOY ALL GREEN! :D 
+
+14. Figure out what `npm run ci` does -> does it run the tests on CircleCI from the console?
