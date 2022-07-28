@@ -75,11 +75,10 @@ commit to existing branch
 
 ![fast config](public/assets/images/pull-request.png)
 
-12. Pull & merge
+12. Pull from github
 
 ```
 git pull
 ```
 
-
-666. In terminal run `npm run ci`
+13. ENJOY ALL GREEN! :D 
