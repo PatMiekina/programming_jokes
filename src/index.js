@@ -1,32 +1,36 @@
-const express = require('express')
-const app = express()
-const path = require('path')
-const PORT = 3000
-const https = require('https')
+const express = require('express');
+const app = express();
+const path = require('path');
+const PORT = 3000;
+const https = require('https');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    
+    let joke = "";
+    const jokes = [];
+
     const url = 'https://v2.jokeapi.dev/joke/Programming';
-    https.get(url, function(response) {
+
+    const data = https.get(url, function(response) {
         response.on("data", function(data){
             const jokeData = JSON.parse(data);
-            console.log(jokeData);
+            if (jokeData.joke) {
+                joke = jokeData.joke;
+                res.send(joke);
+            } else if (jokeData.setup && jokeData.delivery) {
+                joke = (jokeData.setup + "\n" + jokeData.delivery);
+            }
+            console.log(joke);
+        })
+        response.on('end', () => {
+            return joke;
         })
     })
-
-    // const joke = $.getJSON(`https://v2.jokeapi.dev/joke/Programming`).then(response => response.json())
-    // console.log(joke);
-    
-    // if (joke.joke) {
-    //   document.getElementById('joke-all').innerHTML = joke.joke;
-    // } else {
-    //   document.getElementById('joke-setup').innerHTML = joke.setup;
-    //   document.getElementById('joke-delivery').innerHTML = joke.delivery;
-    // }
-
-    res.sendFile(path.join(__dirname, 'pages/index.html'))
+    res.render('index', {yourJoke: joke});
+    // res.sendFile(path.join(__dirname, 'pages/index.html'))
 })
 
 app.get('/start', (req, res) => {
